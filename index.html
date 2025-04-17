@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Hair Care Products - Transform Your Hair Today!</title>
+    <style>
+        /* Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f5f0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+       
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+            border-radius: 0 0 20px 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .header-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+        }
+        .subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 25px;
+            opacity: 0.9;
+        }
+       
+        /* Button Styles */
+        .cta-button {
+            display: inline-block;
+            background: #ff6b6b;
+            color: white;
+            padding: 15px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(255,107,107,0.4);
+            margin: 10px 0;
+        }
+        .cta-button:hover {
+            background: #ff5252;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(255,107,107,0.6);
+        }
+       
+        /* Product Showcase */
+        .product-showcase {
+            padding: 60px 0;
+            text-align: center;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .product-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .product-card:hover {
+            transform: translateY(-10px);
+        }
+        .product-image {
+            height: 250px;
+            background-size: cover;
+            background-position: center;
+        }
+        .product-info {
+            padding: 20px;
+        }
+        .product-name {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        .product-price {
+            color: #e74c3c;
+            font-weight: bold;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+        }
+       
+        /* Benefits Section */
+        .benefits {
+            background: white;
+            padding: 60px 0;
+            margin: 40px 0;
+            border-radius: 20px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.05);
+        }
+        .benefits-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            margin-bottom: 40px;
+            color: #2c3e50;
+            position: relative;
+        }
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            margin: 15px auto;
+            border-radius: 2px;
+        }
+        .benefit-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 30px;
+        }
+        .benefit-icon {
+            font-size: 2rem;
+            color: #6a11cb;
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+        .benefit-content h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+       
+        /* Testimonials */
+        .testimonials {
+            padding: 60px 0;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            border-radius: 20px;
+            margin: 40px 0;
+        }
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .testimonial-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        .testimonial-text:before {
+            content: '"';
+            font-size: 4rem;
+            color: rgba(106, 17, 203, 0.1);
+            position: absolute;
+            top: -20px;
+            left: -10px;
+            z-index: 0;
+        }
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #6a11cb;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            font-weight: bold;
+        }
+        .author-info h4 {
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+        .author-info p {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+       
+        /* Offer Section */
+        .offer-section {
+            text-align: center;
+            padding: 60px 0;
+            background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+            color: white;
+            border-radius: 20px;
+            margin: 40px 0;
+        }
+        .offer-title {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+        }
+        .offer-subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        .countdown-item {
+            background: rgba(255,255,255,0.2);
+            padding: 15px 20px;
+            border-radius: 10px;
+            min-width: 80px;
+        }
+        .countdown-number {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        .countdown-label {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            opacity: 0.8;
+        }
+       
+        /* FAQ Section */
+        .faq {
+            padding: 60px 0;
+        }
+        .faq-item {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+        }
+        .faq-question {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .faq-question:after {
+            content: '+';
+            font-size: 1.5rem;
+            color: #6a11cb;
+        }
+        .faq-answer {
+            color: #7f8c8d;
+            line-height: 1.7;
+            display: none;
+        }
+       
+        /* Final CTA */
+        .final-cta {
+            text-align: center;
+            padding: 80px 0;
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: white;
+            border-radius: 20px;
+            margin-bottom: 40px;
+        }
+        .final-cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        .final-cta p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            opacity: 0.9;
+        }
+       
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+       
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            .subtitle {
+                font-size: 1.1rem;
+            }
+            .section-title {
+                font-size: 1.8rem;
+            }
+            .offer-title {
+                font-size: 1.8rem;
+            }
+            .countdown {
+                flex-wrap: wrap;
+            }
+            .final-cta h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <h1>Transform Your Hair Today!</h1>
+                <p class="subtitle">Discover the secret to luxurious, healthy hair with our premium hair care products</p>
+                <a href="YOUR_A8_LINK" class="cta-button">Shop Now & Save 20%</a>
+            </div>
+        </div>
+    </header>
+   
+    <!-- Product Showcase -->
+    <section class="product-showcase">
+        <div class="container">
+            <h2 class="section-title">Our Best-Selling Hair Products</h2>
+            <div class="product-grid">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1556228578-8c89e6adf883');"></div>
+                    <div class="product-info">
+                        <h3 class="product-name">Hair Growth Serum</h3>
+                        <p>Stimulates follicles for thicker, fuller hair in just 4 weeks</p>
+                        <div class="product-price">$29.99</div>
+                        <a href="YOUR_A8_LINK" class="cta-button">Add to Cart</a>
+                    </div>
+                </div>
+               
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1608248544923-0ac26a3b6a0d');"></div>
+                    <div class="product-info">
+                        <h3 class="product-name">Repairing Shampoo</h3>
+                        <p>Restores damaged hair with keratin and natural oils</p>
+                        <div class="product-price">$24.99</div>
+                        <a href="YOUR_A8_LINK" class="cta-button">Add to Cart</a>
+                    </div>
+                </div>
+               
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1');"></div>
+                    <div class="product-info">
+                        <h3 class="product-name">Heat Protectant Spray</h3>
+                        <p>Shields hair from damage up to 450°F</p>
+                        <div class="product-price">$19.99</div>
+                        <a href="YOUR_A8_LINK" class="cta-button">Add to Cart</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+   
+    <!-- Benefits Section -->
+    <section class="benefits">
+        <div class="container">
+            <div class="benefits-container">
+                <h2 class="section-title">Why Our Products Work</h2>
+               
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <div class="benefit-content">
+                        <h3>Clinically Proven Formulas</h3>
+                        <p>Our products are developed with dermatologists and tested for maximum effectiveness and safety for all hair types.</p>
+                    </div>
+                </div>
+               
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <div class="benefit-content">
+                        <h3>Natural Ingredients</h3>
+                        <p>We use plant-based extracts, essential oils, and avoid harsh chemicals like sulfates and parabens.</p>
+                    </div>
+                </div>
+               
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <div class="benefit-content">
+                        <h3>Visible Results in Weeks</h3>
+                        <p>Most customers see noticeable improvements in hair texture, shine, and growth within 2-4 weeks of regular use.</p>
+                    </div>
+                </div>
+               
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <div class="benefit-content">
+                        <h3>Salon Quality at Home</h3>
+                        <p>Get professional-grade hair care without the expensive salon visits or treatments.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+   
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Our Customers Say</h2>
+           
+            <div class="testimonial-grid">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        <p>I've struggled with hair loss for years and tried countless products. After just one month using the growth serum, I can see baby hairs growing in my thinning areas. This is miraculous!</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SM</div>
+                        <div class="author-info">
+                            <h4>Sarah M.</h4>
+                            <p>Verified Buyer</p>
+                        </div>
+                    </div>
+                </div>
+               
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        <p>The repairing shampoo completely transformed my bleached, damaged hair. It's now soft, shiny, and the breakage has reduced dramatically. I'll never use another shampoo again!</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">TJ</div>
+                        <div class="author-info">
+                            <h4>Taylor J.</h4>
+                            <p>Verified Buyer</p>
+                        </div>
+                    </div>
+                </div>
+               
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        <p>As a hairstylist, I'm very particular about products. This line exceeds my professional standards. My clients love the results and I now recommend these products to everyone.</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">AL</div>
+                        <div class="author-info">
+                            <h4>Amanda L.</h4>
+                            <p>Professional Stylist</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+   
+    <!-- Special Offer Section -->
+    <section class="offer-section">
+        <div class="container">
+            <h2 class="offer-title">Limited Time Offer!</h2>
+            <p class="offer-subtitle">Get 20% off your first order when you purchase any 2 products. Plus free shipping on orders over $50!</p>
+           
+            <div class="countdown">
+                <div class="countdown-item">
+                    <div class="countdown-number" id="days">03</div>
+                    <div class="countdown-label">Days</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="hours">12</div>
+                    <div class="countdown-label">Hours</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="minutes">45</div>
+                    <div class="countdown-label">Minutes</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="seconds">30</div>
+                    <div class="countdown-label">Seconds</div>
+                </div>
+            </div>
+           
+            <a href="YOUR_A8_LINK" class="cta-button">Claim Your Discount Now</a>
+        </div>
+    </section>
+   
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+           
+            <div class="faq-item">
+                <div class="faq-question">How soon will I see results?</div>
+                <div class="faq-answer">
+                    <p>Most customers notice improvements in hair texture and shine within the first 2 weeks of use. For hair growth, visible results typically appear after 4-6 weeks of consistent use. Individual results may vary based on your hair type and condition.</p>
+                </div>
+            </div>
+           
+            <div class="faq-item">
+                <div class="faq-question">Are your products safe for color-treated hair?</div>
+                <div class="faq-answer">
+                    <p>Yes! All our products are color-safe and formulated to protect your hair color while providing deep nourishment. They're free from sulfates and other harsh chemicals that strip color.</p>
+                </div>
+            </div>
+           
+            <div class="faq-item">
+                <div class="faq-question">What's your return policy?</div>
+                <div class="faq-answer">
+                    <p>We offer a 60-day money-back guarantee. If you're not completely satisfied with your purchase, simply return the unused portion for a full refund, no questions asked.</p>
+                </div>
+            </div>
+           
+            <div class="faq-item">
+                <div class="faq-question">Do you ship internationally?</div>
+                <div class="faq-answer">
+                    <p>Yes, we ship worldwide. Shipping costs and delivery times vary by location. All international orders may be subject to customs fees in your country.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+   
+    <!-- Final CTA Section -->
+    <section class="final-cta">
+        <div class="container">
+            <h2>Ready for Healthier, More Beautiful Hair?</h2>
+            <p>Join thousands of satisfied customers who have transformed their hair with our premium products. Your journey to gorgeous hair starts today!</p>
+            <a href="YOUR_A8_LINK" class="cta-button">Get Started Now</a>
+        </div>
+    </section>
+   
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© 2023 Premium Hair Care. All rights reserved.</p>
+            <p>Note: Replace "YOUR_A8_LINK" with your actual A8.net affiliate link.</p>
+        </div>
+    </footer>
+   
+    <script>
+        // Simple countdown timer
+        function updateCountdown() {
+            const now = new Date();
+            const endDate = new Date();
+            endDate.setDate(now.getDate() + 3); // 3 days from now
+           
+            const diff = endDate - now;
+           
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+           
+            document.getElementById('days').textContent = days.toString().padStart(2, '0');
+            document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+            document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+        }
+       
+        // Update countdown every second
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+       
+        // FAQ toggle functionality
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const isOpen = answer.style.display === 'block';
+               
+                // Close all answers first
+                document.querySelectorAll('.faq-answer').forEach(ans => {
+                    ans.style.display = 'none';
+                    ans.previousElementSibling.innerHTML = ans.previousElementSibling.innerHTML.replace('−', '+');
+                });
+               
+                // Open clicked answer if it was closed
+                if (!isOpen) {
+                    answer.style.display = 'block';
+                    question.innerHTML = question.innerHTML.replace('+', '−');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
