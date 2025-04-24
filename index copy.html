@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KIWABI 白髪染めカラーシャンプー | 敏感肌用</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        body {
+            color: #080808;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background-color: #00fc5c;
+            box-shadow: 0 2px 10px rgba(245, 130, 130, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ffffff;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #f9f3f9 0%, #e8d8e8 100%);
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #0eed63;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #8e6c88;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #034e04;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .features {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 2rem;
+            color: #06cb3b88;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            color: #8e6c88;
+            margin-bottom: 20px;
+        }
+
+        .how-to-use {
+            background-color: #f9f3f9;
+            padding: 80px 0;
+        }
+
+        .steps {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .step {
+            flex: 1;
+            min-width: 250px;
+            max-width: 300px;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .step-number {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: #034313;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .testimonials {
+            padding: 80px 0;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .testimonial {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-author {
+            font-weight: bold;
+            color: #8e6c88;
+        }
+
+        footer {
+            background-color: #08501e;
+            color: white;
+            padding: 50px 0 20px;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">KIWABI</div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>毎日のシャンプーで自然に白髪染め</h1>
+            <p>敏感肌でも使える植物由来の白髪染めシャンプー。8つの無添加成分で頭皮に優しく、ラベンダーの香りでリラックスしながら白髪ケア。</p>
+        </div>
+    </section>
+
+    <section class="bg-light py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <diV class="col-md-6">
+                    <img src="1.png" alt="サービス画像" class="img-fluid rounded">
+                    <img src="2.png" alt="サービス画像" class="img-fluid rounded">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <h2 class="section-title">KIWABI 白髪染めシャンプーの特徴</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🌿</div>
+                    <h3>植物由来成分</h3>
+                    <p>20種類の植物エキスと5種の天然オイル配合で、髪と頭皮を健やかに保ちます。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>簡単毎日ケア</h3>
+                    <p>シャンプーするだけでOK。特別な時間を取らずに白髪ケアができます。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌸</div>
+                    <h3>敏感肌に優しい</h3>
+                    <p>ジアミン・パラベン・香料・シリコーンなど8つの成分を無添加。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Use Section -->
+    <section class="how-to-use" id="how-to-use">
+        <div class="container">
+            <h2 class="section-title">使い方</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>髪を濡らす</h3>
+                    <p>髪をしっかりと濡らし、適量を手に取ります。</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>泡立てる</h3>
+                    <p>キメ細かい泡を立て、髪全体になじませます。</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>待つ</h3>
+                    <p>3〜5分放置し、色素が定着するのを待ちます。</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>洗い流す</h3>
+                    <p>しっかり洗い流し、通常のヘアケアを行います。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <h2 class="section-title">お客様の声</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial">
+                    <p class="testimonial-text">"今まで使った白髪染めで一番頭皮に優しいです。2週間使ったら自然なブラウンに染まり、周りからも『若返った？』と言われました。"</p>
+                    <p class="testimonial-author">50代・女性</p>
+                </div>
+                <div class="testimonial">
+                    <p class="testimonial-text">"シャンプーするだけなのにしっかり染まるので、忙しい私にぴったり。臭いもなく、ラベンダーの香りでリラックスできます。"</p>
+                    <p class="testimonial-author">40代・男性</p>
+                </div>
+                <div class="testimonial">
+                    <p class="testimonial-text">"敏感肌で今まで染められなかったのですが、この商品はかゆみも出ずに使えています。色も自然で気に入りました。"</p>
+                    <p class="testimonial-author">60代・女性</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="hero" id="buy" style="padding: 60px 0;">
+        <div class="container">
+            <h2>今なら初回限定価格でお試し可能</h2>
+            <p>30日間返金保証付きで、リスクなくお試しいただけます。</p>
+            <a href="https://kiwabi-japan.myshopify.com/pages/rv003-r-a8" class="cta-button">公式サイトで購入</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#">お問い合わせ</a>
+                <p>050-4629-1233</p>
+            </div>
+
+        </div>
+    </footer>
+</body>
+
+</html>
